@@ -107,7 +107,33 @@ public class MainApplet extends Applet implements ActionListener, Runnable {
 			 System.out.println(lastString);
 			 WritetoConsole(EchoText);
 		      
-		
+		 } else if(cmdcomponents[0].equalsIgnoreCase("Help")){
+			 if(lastString.equalsIgnoreCase("help")){
+				 pastehelp();
+				 
+			 } else {
+				 if(cmdcomponents[1].equalsIgnoreCase("dir")){
+					 WritetoConsole(" Usage:dir\n Description: Outputs a list of files and folders in the current directory");
+					 
+				 } else if(cmdcomponents[1].equalsIgnoreCase("cd")){
+					 WritetoConsole(" Usage:cd [Exact location eg: C:\\Users\\fred\\desktop\\my pics\\]\n Description: Changes the working directory");
+					 
+				 } else if(cmdcomponents[1].equalsIgnoreCase("echo")){
+					 WritetoConsole(" Usage:echo [Message]\n Description: Outputs a line of text, quite useless without scripting support");
+					 
+					/*
+				 } else if(cmdcomponents[1].equalsIgnoreCase("")){
+					 WritetoConsole("");
+					 
+				 } else if(cmdcomponents[1].equalsIgnoreCase("")){
+					 WritetoConsole(""); 
+					 
+					 
+					 */
+				 }
+				 
+			 }
+			 
 			 
 			 
 		/* Command test code
@@ -138,6 +164,11 @@ public class MainApplet extends Applet implements ActionListener, Runnable {
 		}
 		
 	}
+	private void pastehelp() {
+		// TODO Auto-generated method stub
+		
+	}
+	
 	@Override
 	public void run() {
     	String line;
